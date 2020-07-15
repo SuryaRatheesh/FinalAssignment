@@ -22,8 +22,8 @@ export const ContactList = () => {
                             <td>{contact.name}</td>
                             <td>{contact.email}</td>
                             <td>{contact.phone}</td>
-                            <td onClick={() => { deleteContact(contact.id) }}>Delete</td>
                             <Link to={`/edit/${contact.id},${contact.name},${contact.email},${contact.phone}`}>Edit</Link>
+                            <td><Link onClick={() => { deleteContact(contact.id) }}>Delete</Link></td>
                         </tr>
                     })}
                 </tbody>
